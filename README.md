@@ -1,17 +1,15 @@
-# Project - Controller for Two LED Strips with Display
-
-## Project Objective:
+# Project Objective:
 The goal of this project is to create a controller for managing LED strips.
 
-## Project Components:
+# Project Components:
 
-# ATMEL ATmega328P Microcontroller:
+## ATMEL ATmega328P Microcontroller:
 ![](https://raw.githubusercontent.com/suronomo/dual_led_controller/main/figures/microcontroler.PNG)
-<div align="left" style="font-size:17px;">
-  Figure 1. ATMEL ATmega328P Microcontroller
+<div align="left" style="font-size:20px;">
+  <b>Figure 1. ATMEL ATmega328P Microcontroller</b>
 </div><br>
 
-# ATMEL ATmega328P Specifications:
+## ATMEL ATmega328P Specifications:
 * Power supply: 1.8 V - 5.5 V
 * Clock speed: up to 20 MHz
 * Flash memory: 32 KB
@@ -21,22 +19,34 @@ The goal of this project is to create a controller for managing LED strips.
 * 6 PWM channels
 * 6 channels of 10-bit ADC
 
-# Eagle Board:
+## Eagle Board:
 ![Board](https://github.com/suronomo/dual_led_controller/raw/main/figures/board_layout.PNG)
+<div align="left" style="font-size:20px;">
+	<b>Figure 2. Eagle Board</b>
+</div><br>
 
-# *I/O Devices*
+## *I/O Devices*
 - Input Device:  
-Surface-mounted TACT switches.
+Surface-mounted TACT switches
 
 ![](https://github.com/suronomo/projektTM/blob/3cc199fcfc6601c19956ea6b900de285284bb0e5/fotografie/Button.PNG)
+<div align="left" style="font-size:20px;">
+	<b>Figure 3. Buttons</b>
+</div><br>
 
-- It can be a switch, reed sensor, or PIR sensor — its role is to trigger the system.
+- It can be a switch, reed sensor, or PIR sensor — its role is to trigger the system
 
 ![](https://github.com/suronomo/projektTM/blob/3cc199fcfc6601c19956ea6b900de285284bb0e5/fotografie/Stave.PNG)
+<div align="left" style="font-size:20px;">
+	<b>Figure 4. Interference Inpust</b>
+</div><br>
 
 - Output Device: 2x16 character LED display
 
 ![](https://github.com/suronomo/projektTM/blob/888ff3fb22433c93b6e70e420a299d2a80d48841/fotografie/Screen.PNG)
+<div align="left" style="font-size:20px;">
+	<b>Figure 5. 2x16 character LED display</b>
+</div><br>
 
 ## Display Specifications:
 * LCD display 2x16 characters
@@ -47,11 +57,14 @@ Surface-mounted TACT switches.
 * Character size: 2.45 x 5.00 mm
 * Operating temperature range: -20 to +70°C
 
-# ATMEL ATmega328P Pinout:
+## ATMEL ATmega328P Pinouts:
 ![](https://github.com/suronomo/projektTM/blob/46760b7d7dbde397f36da126a4406366f73b8289/fotografie/Pinout.png)
+<div align="left" style="font-size:20px;">
+	<b>Figure 6. ATMEL ATmega328P Pinouts</b>
+</div><br>
 
 
-# Code
+# Code:
 ```
 #include <avr/io.h>
 #include <util/delay.h>
