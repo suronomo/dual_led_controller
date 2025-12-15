@@ -1,67 +1,57 @@
-# Projekt - Sterownik do dwóch taśm LED z wyświetlaczem.
+# Project - Controller for Two LED Strips with Display
 
-## Zadanie projektu:
-Założeniem projektu jest wykonanie sterownika do kontroli taśm ledowych.
+## Project Objective:
+The goal of this project is to create a controller for managing LED strips.
 
-## Budowa projektu:
-# Mikrokontroler ATMEL ATmega328P:
-![](https://github.com/suronomo/projektTM/blob/6d0f4b5464e575dd86a42b8a53a452ddc73a3d90/fotografie/Mikrokontroler.PNG)
+## Project Components:
 
-# Specyfikacja ATMEL ATmega328P:
-* Zasilanie: 1,8 V - 5,5 V 
+# ATMEL ATmega328P Microcontroller:
+![](https://raw.githubusercontent.com/suronomo/dual_led_controller/main/figures/microcontroler.PNG)
+<div align="left" style="font-size:17px;">
+  Figure 1. ATMEL ATmega328P Microcontroller
+</div><br>
 
-* Taktowanie: do 20 MHz
+# ATMEL ATmega328P Specifications:
+* Power supply: 1.8 V - 5.5 V
+* Clock speed: up to 20 MHz
+* Flash memory: 32 KB
+* 23 input/output pins
+* Two 8-bit timers
+* One 16-bit timer
+* 6 PWM channels
+* 6 channels of 10-bit ADC
 
-* Pamięć Flash: 32 KB
+# Eagle Board:
+![Board](https://github.com/suronomo/dual_led_controller/raw/main/figures/board_layout.PNG)
 
-* 23 linie wyjścia/wejścia
-
-* Dwa 8-bitowe liczniki 
-
-* Jeden 16-bitowy licznik
-
-* 6 kanałów PWM
-
-* 6 kanałów 10-bitowego przetwornika analogowo-cyfrowego
-
-
-# Eagle board:
-![](https://github.com/suronomo/projektTM/blob/0488b0967d13b00cf496a41c1891c0bef8c12b6d/fotografie/Board.PNG)
-
-
-# *Urządzenia I/O*
-- Urządzenie Input: 
-Mikroprzełączniki typu TACT lutowane powierzchniowo.
+# *I/O Devices*
+- Input Device:  
+Surface-mounted TACT switches.
 
 ![](https://github.com/suronomo/projektTM/blob/3cc199fcfc6601c19956ea6b900de285284bb0e5/fotografie/Button.PNG)
 
-- Może to być mikroprzełącznik, zwroka, czujka PIR - ma za zadanie uruchomić układ.
+- It can be a switch, reed sensor, or PIR sensor — its role is to trigger the system.
 
 ![](https://github.com/suronomo/projektTM/blob/3cc199fcfc6601c19956ea6b900de285284bb0e5/fotografie/Stave.PNG)
 
-
-- Urządzenie Output: Wyświetlacz 2x16 znaków LED
+- Output Device: 2x16 character LED display
 
 ![](https://github.com/suronomo/projektTM/blob/888ff3fb22433c93b6e70e420a299d2a80d48841/fotografie/Screen.PNG)
-## Specyfikacja wyświetlacza:
-* Wyświetlacz LCD 2x16 znaków
 
-* Sterownik zgodny z HD44780
+## Display Specifications:
+* LCD display 2x16 characters
+* Controller compatible with HD44780
+* Blue negative
+* White LED backlight, white characters
+* Module size: 80 x 36 x 12 mm
+* Character size: 2.45 x 5.00 mm
+* Operating temperature range: -20 to +70°C
 
-* Niebieski negatyw
-
-* Podświetlanie białe diody LED, białe znaki
-
-* Rozmiar modułu: 80 x 36 x 12 mm
- 
-* Wymiary znaku: 2,45 x 5,00 mm  
-
-* Zakres temperatur pracy: od -20 do +70°C
-
-# Pinout ATMEL ATmega328P:
+# ATMEL ATmega328P Pinout:
 ![](https://github.com/suronomo/projektTM/blob/46760b7d7dbde397f36da126a4406366f73b8289/fotografie/Pinout.png)
 
-# Kod
+
+# Code
 ```
 #include <avr/io.h>
 #include <util/delay.h>
